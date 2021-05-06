@@ -1,0 +1,53 @@
+{
+  "name": "bahari",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint --ext .js .",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.(js|json|html|css)\"",
+    "validate": "yarn run lint && yarn run format"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "4",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.12",
+    "vite": "^2.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.+(js|json)": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": false,
+    "embeddedLanguageFormatting": "auto",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxBracketSameLine": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "always",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  }
+}

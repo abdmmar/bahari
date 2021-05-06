@@ -1,0 +1,19 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+.hello {
+  border: 0;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    box-shadow: 0 0 5px 0 hsla(225, 6%, 13%, 0.28);
+  }
+}
